@@ -1,11 +1,14 @@
 
+import Sidebar from './Component/Dashboard/Sidebar/Sidebar';
 import './App.css';
-import Loginpage from './Component/Loginpage/Loginpage';
+import DashboardPage from './Component/Dashboard/DashboardPage';
+import Adminpage from './Component/Dashboard/Adminpage';
+import CardArray from './Component/Dashboard/CardArray';
 
 function App() {
   return (
     <>
-    <Loginpage/>
+   <DashboardPage/>
     </>
   )
 }

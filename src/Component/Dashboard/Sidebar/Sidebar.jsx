@@ -1,10 +1,10 @@
 import React from 'react';
 import { CDBSidebar, CDBSidebarContent, CDBSidebarFooter, CDBSidebarHeader, CDBSidebarMenu, CDBSidebarMenuItem } from 'cdbreact';
-import { NavLink } from 'react-router-dom';
+import {Link }from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <div style={{ display: 'flex', height: '100vh', overflow: 'scroll initial ',margin:"0" }}>
+    <div style={{ display: 'flex', height: '145vh', overflow: 'scroll initial ', margin: '0' }}>
       <CDBSidebar textColor="#fff" backgroundColor="#333">
         <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
           <a href="/" className="text-decoration-none" style={{ color: 'inherit' }}>
@@ -14,21 +14,11 @@ const Sidebar = () => {
 
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
-            <NavLink exact to="/" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="columns">Dashboard</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink exact to="/tables" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="table">Tables</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink exact to="/profile" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="user">Profile page</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink exact to="/analytics" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="chart-line">Analytics</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink exact to="/hero404" target="_blank" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="exclamation-circle">404 page</CDBSidebarMenuItem>
-            </NavLink>
+            <CDBSidebarMenuItem icon="columns"><Link to='/dashboard'>Dashboard</Link></CDBSidebarMenuItem>
+            <CDBSidebarMenuItem icon="table"><Link to='/tables'>Tables</Link></CDBSidebarMenuItem>
+            <CDBSidebarMenuItem icon="user"><Link to='/profile'>Profile page</Link></CDBSidebarMenuItem>
+            <CDBSidebarMenuItem icon="chart-line"><Link to='/analytics'>Analytics</Link></CDBSidebarMenuItem>
+            <CDBSidebarMenuItem icon="exclamation-circle"><Link to='/'>404 page</Link></CDBSidebarMenuItem>
           </CDBSidebarMenu>
         </CDBSidebarContent>
 
